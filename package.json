@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/polytypic/bacon.react.atom-examples#readme",
   "dependencies": {
-    "bacon.atom": "^0.1.0",
+    "bacon.atom": "^0.2.0",
     "bacon.react.html": "^0.6.0",
     "baconjs": "^0.7.83",
     "ramda": "^0.19.1",
