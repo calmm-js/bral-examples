@@ -28,8 +28,8 @@
   },
   "homepage": "https://github.com/polytypic/bacon.react.atom-examples#readme",
   "dependencies": {
-    "bacon.atom": "^1.0.0",
-    "bacon.react.html": "^1.1.0",
+    "bacon.atom": "^1.0.1",
+    "bacon.react.html": "^1.1.2",
     "baconjs": "^0.7.83",
     "ramda": "^0.19.1",
     "react": "^0.14.3",
