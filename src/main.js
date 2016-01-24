@@ -1,8 +1,8 @@
 import Atom  from "bacon.atom"
 import React from "react"
 
-import Counter from "./counter"
-import * as BMI from "./bmi"
+import BMI       from "./bmi"
+import Counter   from "./counter"
 
 const Src = ({src}) => <a target="_blank" href={`../src/${src}`}>{src}</a>
 
@@ -17,7 +17,7 @@ export default () => <main>
 
   <section>
     <h2>BMI control</h2>
-    <BMI.Control model={BMI.model()}/>
+    <BMI model={BMI.model()}/>
     <Src src="bmi.js"/>
   </section>
 
@@ -25,8 +25,8 @@ export default () => <main>
     <h2>BMI controls with a shared model</h2>
     <div style={{display: "flex"}}>{(() => {
       const shared = BMI.model()
-      return [<BMI.Control key="1" model={shared}/>,
-              <BMI.Control key="2" model={shared}/>]
+      return [<BMI key="1" model={shared}/>,
+              <BMI key="2" model={shared}/>]
     })()}</div>
   </section>
 </main>
