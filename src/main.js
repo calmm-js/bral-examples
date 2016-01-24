@@ -24,9 +24,9 @@ export default () => <main>
   <section>
     <h2>BMI controls with a shared model</h2>
     <div style={{display: "flex"}}>{(() => {
-      const shared = BMI.model()
-      return [<BMI key="1" model={shared}/>,
-              <BMI key="2" model={shared}/>]
+      const model = BMI.model()
+      return [<BMI key="1" {...{model}}/>,
+              <BMI key="2" {...{model}}/>]
     })()}</div>
   </section>
 </main>
