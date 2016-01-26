@@ -6,3 +6,6 @@ npm run build
 ```
 
 Then `open public/index.html` file in your browser.
+
+If you want to edit the code, you can also run `npm run watch` to auto build
+when sources are changed.  You will need to manually refresh the browser.
