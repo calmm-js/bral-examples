@@ -40,6 +40,7 @@ export default () => <main>
   <section>
     <h2>Scroll</h2>
     <Scroll />
+    <Src src="scroll.js"/>
   </section>
 
     <h2>BMI control</h2>
