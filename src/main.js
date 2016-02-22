@@ -6,6 +6,7 @@ import Checkbox  from "./checkbox"
 import Clock     from "./clock"
 import Counter   from "./counter"
 import InputAdd  from "./input-add"
+import Scroll    from "./scroll"
 
 const Src = ({src}) => <a target="_blank" href={`../src/${src}`}>{src}</a>
 
@@ -34,6 +35,11 @@ export default () => <main>
     <h2>Input Add</h2>
     <InputAdd />
     <Src src="input-add.js"/>
+  </section>
+
+  <section>
+    <h2>Scroll</h2>
+    <Scroll />
   </section>
 
     <h2>BMI control</h2>
