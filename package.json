@@ -5,7 +5,7 @@
   "scripts": {
     "build": "npm run build:js && npm run build:css",
     "build:css": "lessc src/*.less > public/bundle.css",
-    "build:js": "browserify src/app.js -t babelify -g uglifyify > public/app.js",
+    "build:js": "export NODE_ENV=production && browserify src/app.js -t babelify -t envify -g uglifyify > public/app.js",
     "lint": "eslint src test",
     "prepublish": "npm run lint && npm run build",
     "watch": "npm run watch:js & npm run watch:css",
@@ -22,7 +22,6 @@
     "atom",
     "reactive"
   ],
-  "author": "",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dirty-js/bacon.react.atom-examples/issues"
@@ -48,6 +47,7 @@
     "babel-preset-stage-2": "^6.5.0",
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
+    "envify": "^3.4.0",
     "eslint": "^2.2.0",
     "eslint-plugin-react": "^4.0.0",
     "less": "^2.6.0",
