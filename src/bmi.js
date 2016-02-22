@@ -8,7 +8,7 @@ const Slider = ({title, units, value, ...props}) =>
     <B.input type="range" {...bind({value})} {...props}/>
   </div>
 
-const Control = ({model: {weight, height, bmi, classification}}) =>
+const Control = ({model: {weight, height, bmi, classification} = Control.model()}) =>
   <B.div {...classes("bmi", classification)}>
     <Slider title="Weight" units="kg" min={40}  max={140} value={weight}/>
     <Slider title="Height" units="cm" min={140} max={210} value={height}/>
