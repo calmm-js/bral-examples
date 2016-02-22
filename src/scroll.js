@@ -4,6 +4,8 @@ import Bacon     from "baconjs"
 import R         from "ramda"
 import React     from "react"
 
+// The code below could be put into a library.
+
 const setProps = template => {
   let dispose = null
   return e => {
@@ -28,6 +30,8 @@ const getProps = template => ({target}) => {
 const bindProps = ({ref, mount, ...template}) =>
   ({[ref && "ref" || mount && "mount"]: setProps(template),
     [ref || mount]: getProps(template)})
+
+// The code above could be put into a library.
 
 const ten = [0,1,2,3,4,5,6,7,8,9]
 
