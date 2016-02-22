@@ -1,6 +1,7 @@
 import Atom      from "bacon.atom"
 import B, {bind} from "bacon.react.html"
 import Bacon     from "baconjs"
+import L         from "partial.lenses"
 import R         from "ramda"
 import React     from "react"
 
@@ -43,12 +44,21 @@ const Scroller = ({scrollTop, scrollLeft}) =>
     <pre>{cat}</pre>
   </div>
 
+const NumberInput = ({label, value}) =>
+  <div>
+    <label>{label}
+      <B.input type="number"
+               {...bind({value: value.lens(L.normalize(
+                 x => typeof x === "string" ? parseInt(x, 10) : x))})}/>
+    </label>
+  </div>
+
 export default ({scrollTop = Atom(0), scrollLeft = Atom(0)}) =>
   <div>
-    <Scroller {...{scrollTop, scrollLeft}} />
-    <Scroller {...{scrollTop, scrollLeft}} />
-    <B.div>y: {scrollTop}</B.div>
-    <B.div>x: {scrollLeft}</B.div>
+    <Scroller {...{scrollTop, scrollLeft}}/>
+    <Scroller {...{scrollTop, scrollLeft}}/>
+    <NumberInput label="y " value={scrollTop}/>
+    <NumberInput label="x " value={scrollLeft}/>
   </div>
 
 const cat = [
