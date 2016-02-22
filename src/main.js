@@ -5,6 +5,7 @@ import Checkbox  from "./checkbox"
 import Clock     from "./clock"
 import Counter   from "./counter"
 import InputAdd  from "./input-add"
+import Phonebook from "./phonebook"
 import Scroll    from "./scroll"
 
 const Src = ({src}) => <a target="_blank" href={`../src/${src}`}>{src}</a>
@@ -41,6 +42,12 @@ export default () =>
       <h2>Scroll</h2>
       <Scroll/>
       <Src src="scroll.js"/>
+    </section>
+
+    <section>
+      <h2>Phonebook</h2>
+      <Phonebook/>
+      <Src src="phonebook.js"/>
     </section>
 
     <section>
