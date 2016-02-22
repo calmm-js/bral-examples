@@ -3,7 +3,7 @@ import B, {bind} from "bacon.react.html"
 import R         from "ramda"
 import React     from "react"
 
-const Control = ({elems = Atom([]), entry = Atom("")}) =>
+export default ({elems = Atom([]), entry = Atom("")}) =>
   <div>
     <div>
       <B.input type="text" {...bind({value: entry})}/>
@@ -16,5 +16,3 @@ const Control = ({elems = Atom([]), entry = Atom("")}) =>
       {B(elems, elems => elems.map((elem, i) => <li key={i}>{elem}</li>))}
     </B.ul>
   </div>
-
-export default Control
