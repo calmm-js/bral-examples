@@ -8,8 +8,11 @@ export default ({elems = Atom([]), entry = Atom("")}) =>
     <div>
       <B.input type="text" {...bind({value: entry})}/>
       <button onClick={() => {
-        elems.modify(R.append(entry.get()))
-        entry.set("")
+        const elem = entry.get().trim()
+        if (elem) {
+          elems.modify(R.append(elem))
+          entry.set("")
+        }
       }}>Add</button>
     </div>
     <B.ul>
