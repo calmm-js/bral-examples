@@ -5,6 +5,7 @@ import BMI       from "./bmi"
 import Checkbox  from "./checkbox"
 import Clock     from "./clock"
 import Counter   from "./counter"
+import InputAdd  from "./input-add"
 
 const Src = ({src}) => <a target="_blank" href={`../src/${src}`}>{src}</a>
 
@@ -30,6 +31,11 @@ export default () => <main>
   </section>
 
   <section>
+    <h2>Input Add</h2>
+    <InputAdd />
+    <Src src="input-add.js"/>
+  </section>
+
     <h2>BMI control</h2>
     <BMI model={BMI.model()}/>
     <Src src="bmi.js"/>
