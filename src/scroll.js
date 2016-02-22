@@ -49,8 +49,7 @@ const Scroller = ({scrollTop, scrollLeft}) =>
       </div>)}
   </div>
 
-export default ({scrollTop = Atom(0),
-                 scrollLeft = Atom(0)}) =>
+export default ({scrollTop = Atom(0), scrollLeft = Atom(0)}) =>
   <div>
     <Scroller {...{scrollTop, scrollLeft}} />
     <Scroller {...{scrollTop, scrollLeft}} />
