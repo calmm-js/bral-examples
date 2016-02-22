@@ -1,38 +1,7 @@
-import Atom      from "bacon.atom"
-import B, {bind} from "bacon.react.html"
-import Bacon     from "baconjs"
-import L         from "partial.lenses"
-import R         from "ramda"
-import React     from "react"
-
-// The code below could be put into a library.
-
-const setProps = template => {
-  let dispose = null
-  return e => {
-    if (dispose) {
-      dispose()
-      dispose = null
-    }
-    if (e) {
-      dispose = Bacon.combineTemplate(template).onValue(template => {
-        for (const k in template)
-          e[k] = template[k]
-      })
-    }
-  }
-}
-
-const getProps = template => ({target}) => {
-  for (const k in template)
-    template[k].set(target[k])
-}
-
-const bindProps = ({ref, mount, ...template}) =>
-  ({[ref && "ref" || mount && "mount"]: setProps(template),
-    [ref || mount]: getProps(template)})
-
-// The code above could be put into a library.
+import Atom                 from "bacon.atom"
+import B, {bind, bindProps} from "bacon.react.html"
+import L                    from "partial.lenses"
+import React                from "react"
 
 const Scroller = ({scrollTop, scrollLeft}) =>
   <div {...bindProps({ref: "onScroll", scrollTop, scrollLeft})}

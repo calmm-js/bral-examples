@@ -1,4 +1,3 @@
-import Atom  from "bacon.atom"
 import React from "react"
 
 import BMI       from "./bmi"
