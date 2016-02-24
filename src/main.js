@@ -4,6 +4,7 @@ import BMI       from "./bmi"
 import Checkbox  from "./checkbox"
 import Clock     from "./clock"
 import Counter   from "./counter"
+import DynList   from "./dyn-list"
 import InputAdd  from "./input-add"
 import Phonebook from "./phonebook"
 import Scroll    from "./scroll"
@@ -18,6 +19,12 @@ export default () =>
       <h2>Simple counter</h2>
       <Counter/>
       <Src src="counter.js"/>
+    </section>
+
+    <section>
+      <h2>Dynamic list</h2>
+      <DynList/>
+      <Src src="dyn-list.js"/>
     </section>
 
     <section>
