@@ -1,7 +1,7 @@
-[![](https://david-dm.org/dirty-js/bacon.react.atom-examples.svg)](https://david-dm.org/dirty-js/bacon.react.atom-examples)
+[![](https://david-dm.org/calmm-js/bacon.react.atom-examples.svg)](https://david-dm.org/calmm-js/bacon.react.atom-examples)
 
 ```bash
-git clone https://github.com/dirty-js/bacon.react.atom-examples.git
+git clone https://github.com/calmm-js/bacon.react.atom-examples.git
 cd bacon.react.atom-examples
 npm install
 npm run build
