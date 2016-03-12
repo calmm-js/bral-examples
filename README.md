@@ -1,10 +1,9 @@
-[![](https://david-dm.org/calmm-js/bacon.react.atom-examples.svg)](https://david-dm.org/calmm-js/bacon.react.atom-examples)
+[![Build Status](https://travis-ci.org/calmm-js/bral-examples.svg?branch=master)](https://travis-ci.org/calmm-js/bral-examples) [![](https://david-dm.org/calmm-js/bral-examples.svg)](https://david-dm.org/calmm-js/bral-examples) [![](https://david-dm.org/calmm-js/bral-examples/dev-status.svg)](https://david-dm.org/calmm-js/bral-examples#info=devDependencies)
 
 ```bash
-git clone https://github.com/calmm-js/bacon.react.atom-examples.git
-cd bacon.react.atom-examples
+git clone https://github.com/calmm-js/bral-examples.git
+cd bral-examples
 npm install
-npm run build
 ```
 
 Then `open public/index.html` file in your browser.

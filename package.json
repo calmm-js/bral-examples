@@ -1,5 +1,5 @@
 {
-  "name": "bacon.react.atom-examples",
+  "name": "bral-examples",
   "description": "Bacon+React+Atom Examples",
   "main": "public/app.js",
   "scripts": {
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/calmm-js/bacon.react.atom-examples.git"
+    "url": "git+https://github.com/calmm-js/bral-examples.git"
   },
   "keywords": [
     "bacon",
@@ -24,9 +24,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/calmm-js/bacon.react.atom-examples/issues"
+    "url": "https://github.com/calmm-js/bral-examples/issues"
   },
-  "homepage": "https://github.com/calmm-js/bacon.react.atom-examples#readme",
+  "homepage": "https://github.com/calmm-js/bral-examples#readme",
   "dependencies": {
     "bacon.atom": "^2.0.3",
     "bacon.react.html": "^1.4.1",
