@@ -1,7 +1,7 @@
+import * as L                  from "partial.lenses"
+import * as R                  from "ramda"
 import Atom                    from "bacon.atom"
 import B, {fromBacon, fromIds} from "bacon.react.html"
-import * as L                  from "partial.lenses"
-import R                       from "ramda"
 import React                   from "react"
 import uuid                    from "uuid"
 

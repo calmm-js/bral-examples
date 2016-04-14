@@ -1,7 +1,7 @@
-import Atom  from "bacon.atom"
-import B     from "bacon.react.html"
-import R     from "ramda"
-import React from "react"
+import * as R from "ramda"
+import Atom   from "bacon.atom"
+import B      from "bacon.react.html"
+import React  from "react"
 
 export default ({value = Atom(0)}) =>
   <div>

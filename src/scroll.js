@@ -1,6 +1,6 @@
+import * as L               from "partial.lenses"
 import Atom                 from "bacon.atom"
 import B, {bind, bindProps} from "bacon.react.html"
-import * as L               from "partial.lenses"
 import React                from "react"
 
 const Scroller = ({scrollTop, scrollLeft}) =>

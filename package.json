@@ -1,5 +1,6 @@
 {
   "name": "bral-examples",
+  "private": true,
   "description": "Bacon+React+Atom Examples",
   "main": "public/app.js",
   "scripts": {
@@ -28,14 +29,14 @@
   },
   "homepage": "https://github.com/calmm-js/bral-examples#readme",
   "dependencies": {
-    "bacon.atom": "^3.0.0",
-    "bacon.react.html": "^3.0.0",
+    "bacon.atom": "^3.1.0",
+    "bacon.react.html": "^3.1.0",
     "baconjs": "^0.7.84",
-    "partial.lenses": "^2.1.0",
-    "ramda": "^0.20.1",
-    "react": "^15.0.0",
-    "react-dom": "^15.0.0",
-    "uuid": "^2.0.1"
+    "partial.lenses": "^3.1.0",
+    "ramda": "^0.21.0",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
+    "uuid": "^2.0.2"
   },
   "devDependencies": {
     "babel-cli": "^6.7.5",
