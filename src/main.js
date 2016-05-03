@@ -1,6 +1,9 @@
-import React from "react"
+import Atom                    from "bacon.atom"
+import React                   from "react"
+import makeStored, {expireNow} from "atom.storage"
 
-import BMI       from "./bmi"
+import BMI       from "./bmi-control"
+import * as BM   from "./bmi-meta"
 import Checkbox  from "./checkbox"
 import Clock     from "./clock"
 import Counter   from "./counter"
@@ -8,6 +11,17 @@ import DynList   from "./dyn-list"
 import InputAdd  from "./input-add"
 import Phonebook from "./phonebook"
 import Scroll    from "./scroll"
+import {pass}    from "./util"
+
+const Stored = ({key, ...props}) =>
+  makeStored({key: `bral-examples:${key}`,
+              storage: localStorage,
+              time: 15*60*1000, // 15 minutes
+              Atom,
+              debounce: 250, ...props})
+
+expireNow({storage: localStorage, regex: /^bral-examples:/})
+
 
 const Src = ({src}) => <a target="_blank" href={`../src/${src}`}>{src}</a>
 
@@ -66,8 +80,9 @@ export default () =>
     <section>
       <h2>BMI controls with a shared model</h2>
       <div style={{display: "flex"}}>
-        {(model => [<BMI key="1" {...{model}}/>,
-                    <BMI key="2" {...{model}}/>])(BMI.model())}
+        {pass(Stored({key: "bmi-shared", value: BM.mock}), bmi =>
+              [<BMI key="1" bmi={bmi}/>,
+               <BMI key="2" bmi={bmi}/>])}
       </div>
     </section>
   </main>
