@@ -1,27 +1,29 @@
-import * as L                  from "partial.lenses"
-import * as R                  from "ramda"
-import Atom                    from "bacon.atom"
-import B, {fromBacon, fromIds} from "bacon.react.html"
-import React                   from "react"
-import uuid                    from "uuid"
+import * as L       from "partial.lenses"
+import * as R       from "ramda"
+import Atom         from "bacon.atom"
+import B, {fromIds} from "bacon.react.html"
+import React        from "react"
+import uuid         from "uuid"
 
 const TextInput = ({value = Atom("")}) => {
   const editing = Atom(false)
   const exit = () => editing.set(false)
-  const save = e => {value.set(e.target.value); exit(e)}
-  return fromBacon(B(editing, e => e
-    ? <B.input key="1"
-               type="text"
-               autoFocus
-               defaultValue={value}
-               onKeyDown={e => e.which === 13 && save(e)
-                            || e.which === 27 && exit(e)}
-               onBlur={save}/>
-    : <B.input key="0"
-               type="text"
-               disabled
-               {...{value}}
-               onDoubleClick={() => editing.set(true)}/>))
+  const save = e => {value.set(e.target.value); exit()}
+  return <B.span onDoubleClick={() => editing.set(true)}>
+      {B(editing, e =>
+         e ? <B.input key="1"
+                      type="text"
+                      autoFocus
+                      onFocus={({target: t}) => t.selectionStart = t.value.length}
+                      defaultValue={value}
+                      onKeyDown={e => e.key === "Enter"  && save(e)
+                                   || e.key === "Escape" && exit()}
+                      onBlur={save}/>
+           : <B.input key="2"
+                      type="text"
+                      disabled
+                      {...{value}}/>)}
+    </B.span>
 }
 
 const Contact = ({model}) =>
