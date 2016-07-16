@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/calmm-js/bral-examples.svg?branch=master)](https://travis-ci.org/calmm-js/bral-examples) [![](https://david-dm.org/calmm-js/bral-examples.svg)](https://david-dm.org/calmm-js/bral-examples) [![](https://david-dm.org/calmm-js/bral-examples/dev-status.svg)](https://david-dm.org/calmm-js/bral-examples#info=devDependencies) [![Gitter](https://img.shields.io/gitter/room/calmm-js/chat.js.svg?style=flat-square)](https://gitter.im/calmm-js/chat)
+[![Build Status](https://travis-ci.org/calmm-js/bral-examples.svg?branch=master)](https://travis-ci.org/calmm-js/bral-examples) [![](https://david-dm.org/calmm-js/bral-examples.svg)](https://david-dm.org/calmm-js/bral-examples) [![](https://david-dm.org/calmm-js/bral-examples/dev-status.svg)](https://david-dm.org/calmm-js/bral-examples#info=devDependencies)
 
 ```bash
 git clone https://github.com/calmm-js/bral-examples.git
